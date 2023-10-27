@@ -5,13 +5,8 @@
 
 sample_word="shelter"
 
+count = $(echo -n $sample_word | grep "t" | wc -c)
 
-count=0
-for (letter in $sample_word); do
-	if [ $letter == "t" ]; then
-		count = count + 1
-	fi
-done
+echo $count
 
-echo There are $count letter t's in the word	
-
+#TODO something with $# works too
